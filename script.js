@@ -26,7 +26,7 @@ search.addEventListener("click", () => {
     }
 
     error404.style.display = "none";
-    error404.classList.remove("fadeIn");
+     //error404.classList.remove("fadeIn");
 
     weatherBox.querySelector("img").src = `https:${json.current.condition.icon}`;
 
