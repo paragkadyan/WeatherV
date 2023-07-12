@@ -16,7 +16,7 @@ search.addEventListener("click", () => {
     }
     fetch(`http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}`).then(Response => Response.json()).then(json => {
 
-    if (json.error.code === 1006) {
+    if (json.error && json.error.code === 1006) {
         container.style.height = '400px';
         weatherBox.style.display = 'none';
         weatherDetails.style.display = 'none';
